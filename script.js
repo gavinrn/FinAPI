@@ -41,3 +41,4 @@ getApi(appleUrl);
 getApi(amazonUrl);
 
 //appleData.appendChild   
+
