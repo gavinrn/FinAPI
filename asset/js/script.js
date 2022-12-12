@@ -65,7 +65,7 @@ function getApi(requestUrl) {
       })
       .then(function (data) {
         console.log(data)
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < data.results.length; i++) {
           var resultTitle = document.createElement("p");
           resultTitle.textContent = data.results[i].title;
           newsfeedEl.append(resultTitle);
