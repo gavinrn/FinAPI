@@ -1,0 +1,58 @@
+
+:root {
+  --dark: #2a2356;
+  --dark-blue: #586ae2;
+  --light-blue: #6ecbf5;
+  --purple: #c252e1;
+  --light: #e0d9f6;
+}
+
+
+
+
+.news-scroll {
+  padding: 10px;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--purple);
+  background-color: var(--dark);
+}
+
+body {
+  background: rgb(88, 106, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(88, 106, 226, 1) 0%,
+    rgba(42, 35, 86, 1) 80%
+  );
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.blinking {
+  animation: blinkingText 1s infinite;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: #000;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
