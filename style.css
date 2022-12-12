@@ -1,3 +1,4 @@
+
 :root {
   --dark: #2a2356;
   --dark-blue: #586ae2;
@@ -5,6 +6,9 @@
   --purple: #c252e1;
   --light: #e0d9f6;
 }
+
+
+
 
 .news-scroll {
   padding: 10px;

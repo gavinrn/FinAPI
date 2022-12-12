@@ -49,99 +49,39 @@
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <!-- Scrolling newsfeed -->
-    <div class="container m-5">
-      <div class="row">
-        <div class="col-md-12 px-10 justify-content-center">
-          <div class="d-flex breaking-news bg-white">
-            <div
-              class="d-flex flex-row flex-grow-1 flex-fill justify-content-center news"
-            ></div>
-            <marquee
-              class="news-scroll"
-              behavior="scroll"
-              direction="left"
-              onmouseover="this.stop();"
-              onmouseout="this.start();"
-            >
-              <a href="#"
-                >Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </a>
-              <span class="dot"></span>
-              <a href="#"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
-              </a>
-              <span class="dot"></span>
-              <a href="#"
-                >Duis aute irure dolor in reprehenderit in voluptate velit esse
-              </a>
-            </marquee>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Stock card -->
+      </nav>
+<!-- Scrolling newsfeed -->  
+        <div class="row container m-5 col-md-12 justify-content-between align-items-center bg-white">
+                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    <div id="newsfeed"><p>Headline</p></div>
+                  </marquee>
+                </div>
+<!-- Stock card -->
     <div class="row m-5">
-      <div class="col-sm-6">
-        <div class="card-header">STOCKS</div>
-        <div class="card">
-          <div class="card-body">
-            <!-- Amazon Stock data -->
-            <p>
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                Amazon Stocks
-              </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                <div class="card" style="width: 18rem">
-                  <ul class="list-group list-group-flush">
-                    <li
-                      class="list-group-item"
-                      id="amazon-stock-basic-financials"
-                    >
-                      Basic Financials
-                      <div class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckDefault"
-                        />
-                      </div>
-                    </li>
-                    <li
-                      class="list-group-item"
-                      id="amazon-stock-recommendation-trends"
-                    >
-                      Recommendation Trends
-                    </li>
-                    <li class="list-group-item" id="amazon-stock-crypto-trends">
-                      Crypto Trends
-                    </li>
-                    <li
-                      class="list-group-item"
-                      id="amazon-stock-earnings-surprises"
-                    >
-                      Earnings Surprises
-                    </li>
-                    <li
-                      class="list-group-item"
-                      id="amazon-stock-social-sentiments"
-                    >
-                      Social Sentiments
-                    </li>
-                  </ul>
+        <div class="col-sm-6">
+            <div class="card-header">
+                Stocks
+              </div>
+          <div class="card">
+            <div class="card-body">
+ <!-- Amazon Stock data -->
+              <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Amazon Stocks
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" id="amazon-stock-basic-financials">Basic Financials</li>
+                      <li class="list-group-item" id="amazon-stock-recommendation-trends">Recommendation Trends</li>
+                      <li class="list-group-item" id="amazon-stock-crypto-trends">Crypto Trends</li>
+                      <li class="list-group-item" id="amazon-stock-earnings-surprises">Earnings Surprises</li>
+                      <li class="list-group-item" id="amazon-stock-social-sentiments">Social Sentiments</li>
+                    </ul>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -288,13 +228,10 @@
       <div class="card-body">
         <p class="blinking">❗ NOT FINANCIAL ADVICE ❗</p>
       </div>
-    </div>
-    <!-- Bootstrap JS link -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+<!-- JQuery JS link -->
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!-- Bootstrap JS link -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+</body>
 </html>
