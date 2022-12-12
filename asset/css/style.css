@@ -8,8 +8,6 @@
 }
 
 
-
-
 .news-scroll {
   padding: 10px;
 }
@@ -55,4 +53,9 @@ body {
   100% {
     color: #000;
   }
+}
+
+/* make marquee transparent */
+marquee{
+  background-color: transparent;
 }
