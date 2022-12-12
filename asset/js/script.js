@@ -87,8 +87,11 @@ console.log(button);
 
 // Add current day and time
 var today = dayjs();
+console.log(today);
+dayjs().format("MMM D, YYYY")
+console.log(dayjs().format("MMM D, YYYY"))
 var currentDay = document.querySelector("#currentDay")
-currentDay.append(today.textContent)
+currentDay.append(dayjs().format("MMM D, YYYY"))
 
 
 
