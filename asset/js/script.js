@@ -10,6 +10,8 @@ const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_1448392e6bf22e35e0f58
 
 var finnhubURL = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=';
 
+
+
 var newsfeedEl = document.querySelector("#newsfeed");
 
 
@@ -83,6 +85,10 @@ getApi(microSoft);
 getApi(XOM);
 console.log(button);
 
+// Add current day and time
+var today = dayjs();
+var currentDay = document.querySelector("#currentDay")
+currentDay.append(today.textContent)
 
 
 
