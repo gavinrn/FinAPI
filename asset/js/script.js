@@ -54,6 +54,24 @@ function getApi(requestUrl) {
 
   }
 
+  function getNewsApi(requestUrl) {
+    fetch(requestUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data)
+        for (var i = 0; i < data.length; i++) {
+          var resultTitle = document.createElement("p");
+          resultTitle.textContent = data.results[i].title;
+          newsfeedEl.append(resultTitle);
+          // console.log(data.results[i].title)
+        }
+      })
+  }
+
+  getNewsApi(newsUrl)
+
 
 getApi(teslaUrl);
 getApi(amazonUrl);
