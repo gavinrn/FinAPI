@@ -27,6 +27,9 @@ fetch(requestUrl)
 getApi(appleUrl);
 getApi(amazonUrl);
 
+
+//appleData.appendChild
+
 // Function to get news data
 function getNewsApi(requestUrl) {
   fetch(requestUrl)
