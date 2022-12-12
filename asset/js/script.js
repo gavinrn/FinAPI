@@ -10,8 +10,8 @@ const microSoft =
 const XOM =
             'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM';
 
-const newsUrl =
-            "https://newsdata.io/api/1/news?apikey=pub_1448392e6bf22e35e0f5846a4d94bc7b09f61&q=results&category=technology&language=en";
+const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_1448392e6bf22e35e0f5846a4d94bc7b09f61&q=results&category=business,technology&language=en";
+
 
 var finnhubURL = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=';
 
@@ -66,7 +66,7 @@ function getApi(requestUrl) {
     });
 
   }
-
+// Newsfeed API function
   function getNewsApi(requestUrl) {
     fetch(requestUrl)
       .then(function (response) {
@@ -75,10 +75,16 @@ function getApi(requestUrl) {
       .then(function (data) {
         console.log(data)
         for (var i = 0; i < data.results.length; i++) {
-          var resultTitle = document.createElement("span");
+          var resultTitle = document.createElement("a");
           resultTitle.textContent = data.results[i].title;
           newsfeedEl.append(resultTitle);
-          // console.log(data.results[i].title)
+
+          newsfeedEl.setAttribute("href", data.results[i].link)
+
+          // var resultLink = document.createAttribute("href");
+          // resultLink.textContent = data.results[i].link;
+          // newsfeedEl.append(resultLink)
+        
         }
       })
   }
