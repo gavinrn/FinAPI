@@ -40,5 +40,4 @@ fetch(requestUrl)
 getApi(appleUrl);
 getApi(amazonUrl);
 
-//appleData.appendChild   
-
+//appleData.appendChild
