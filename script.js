@@ -1,17 +1,6 @@
 const appleUrl = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Tesla';
-
 const amazonUrl = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Amazon.com';
-//var appleData = document.querySelector(#apple-btn);
-
-
-//const api_key = finnHub.ApiClient.instance.authentications['api_key'];
-// const apiKey = "ce9oj4iad3i831oou580ce9oj4iad3i831oou58g"; // Replace with your own API key
-// api_key.apiKey = apiKey;
-// const finnHubClient = new finnHub.DefaultApi()
-
-// finnHubClient.companyBasicFinancials("AAPL", "all", (error, data, response) => {
-//   console.log(data)
-// });
+const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_1448392e6bf22e35e0f5846a4d94bc7b09f61&q=results&category=technology&language=en";
 
 function getApi(requestUrl){
 fetch(requestUrl)
@@ -29,16 +18,26 @@ fetch(requestUrl)
     .then(function (data) {
       console.log(data)
     })
-    //   for (var i = 0; i < data.length; i++) {
-    //     var listItem = document.createElement('li');
-    //     listItem.textContent = data[i].summary;
-    //     repoList.appendChild(listItem);
-    //   }
+    
     });
 }
 
 getApi(appleUrl);
 getApi(amazonUrl);
 
-//appleData.appendChild   
 
+
+function getNewsApi(requestUrl) {
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      for (var i = 0; i < data.results.length; i++) {
+        console.log(data.results[i].title)
+      }
+    })
+}
+
+getNewsApi(newsUrl)
