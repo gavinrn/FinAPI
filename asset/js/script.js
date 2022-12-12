@@ -69,15 +69,9 @@ function getApi(requestUrl) {
         console.log(data)
         for (var i = 0; i < data.results.length; i++) {
           var resultTitle = document.createElement("a");
-          resultTitle.textContent = data.results[i].title;
+          resultTitle.textContent = data.results[i].title + "       ";
+          resultTitle.setAttribute("href", data.results[i].link)
           newsfeedEl.append(resultTitle);
-
-          newsfeedEl.setAttribute("href", data.results[i].link)
-
-          // var resultLink = document.createAttribute("href");
-          // resultLink.textContent = data.results[i].link;
-          // newsfeedEl.append(resultLink)
-        
         }
       })
   }
