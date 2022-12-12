@@ -6,8 +6,12 @@ const microSoft = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce
 
 const XOM = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM';
 
+const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_1448392e6bf22e35e0f5846a4d94bc7b09f61&q=results&category=technology&language=en";
+
 var finnhubURL = 'https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=';
-//var appleData = document.querySelector(#apple-btn);
+
+var newsfeedEl = document.querySelector("#newsfeed");
+
 
 const divStocks = document.getElementById("Stocks");
 const amazon = document.getElementsByTagName("button");
