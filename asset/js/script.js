@@ -26,7 +26,7 @@ const stockSymbol = document.querySelector("#stockSymbol-input");
 const button = document.getElementById("addStocks");
 
 button.addEventListener("click", function () {
-  var name = stockSymbol.value;
+  var name = stockSymbol.value.trim();
   getApi(finnhubURL + name);
 });
 
