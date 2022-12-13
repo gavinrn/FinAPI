@@ -111,13 +111,11 @@ body {
 
 /* Marquee styling  */
 #newsfeed a {
-  color: #64f517;
+  color: var(--purple);
   background: hsla(0, 0%, 0%, 1);
-  font-family: "Electrolize", sans-serif;
+  font-family: "DotGothic16", sans-serif;
   letter-spacing: 3px;
-  text-shadow: 1px 1px hsla(255, 255%, 255%, 0.7),
-    2px 2px hsla(255, 255%, 255%, 0.6), 3px 3px hsla(255, 255%, 255%, 0.5),
-    4px 4px hsla(255, 255%, 255%, 0.3), 5px 5px hsla(255, 255%, 255%, 0.1);
+  margin-bottom: 10px;
 }
 
 #Stocks {
