@@ -1,31 +1,23 @@
-// News Api!
 
-const teslaUrl = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Tesla";
-
-const amazonUrl = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Amazon.com";
-
-const microSoft = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=MSFT";
-
+//XOM starting URL for the website
 const XOM = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM";
-
+//News data URL for the marquee
 const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_14568c083e3420b033803ee4e5dcc79894d97&q=results&category=business,technology&language=en";
-
+// Finn Hub URL for base API functionality
 var finnhubURL = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=";
 
-var newsfeedEl = document.querySelector("#newsfeed");
 
+var newsfeedEl = document.querySelector("#newsfeed");
 const divStocks = document.getElementById("Stocks");
 const amazon = document.getElementsByTagName("button");
 const querySelector = document.body.querySelector("card-body");
 const stockSymbol = document.querySelector("#stockSymbol-input");
-
 const button = document.getElementById("addStocks");
-
 var i = 0;
-
 var color;
-button.addEventListener("click", function () { // adds an event lister to the add stocks button, calls getApi to for the new stock
 
+// Add an event lister to the add stocks button, calls getApi to for the new stock
+button.addEventListener("click", function () {
   var name = stockSymbol.value.trim();
 
   if (i % 2 === 0) {
@@ -33,12 +25,16 @@ button.addEventListener("click", function () { // adds an event lister to the ad
   }
   else {
     color = "orangered";
-
   }
   i++;
   getApi(finnhubURL + name, color);
+  stockSymbol.value = "";
 });
 
+// Add function to clear the input box after entry
+// function InputBoxReset(inputID){
+//   document.getElementById(inputID).value = '';
+// }
 
 divStocks.addEventListener("click" , function(event) { //adds an event listner to the stocks card to save stocks to local storage on dblclick
   event.preventDefault();
