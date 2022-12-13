@@ -98,3 +98,4 @@ currentDay.append(dayjs().format("MMM D, YYYY"));
 $("#myModal").on("shown.bs.modal", function () {
   $("#myInput").trigger("focus");
 });
+
