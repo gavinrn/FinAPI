@@ -11,7 +11,7 @@ const XOM =
   "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM";
 
 const newsUrl =
-  "https://newsdata.io/api/1/news?apikey=pub_14561e5b53f7341486ab754cf4d4fde72aae3&q=results&category=business,technology&language=en";
+  "https://newsdata.io/api/1/news?apikey=pub_14568c083e3420b033803ee4e5dcc79894d97&q=results&category=business,technology&language=en";
 
 var finnhubURL =
   "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=";
@@ -28,31 +28,27 @@ const button = document.getElementById("addStocks");
 var i = 0;
 var color = "blue";
 button.addEventListener("click", function () {
-
   var name = stockSymbol.value.trim();
 
   if (i % 2 === 0) {
     color = "blue";
-  }
-  else {
+  } else {
     color = "red";
   }
   i++;
-  getApi(finnhubURL + name , color);
+  getApi(finnhubURL + name, color);
 });
 
-function displayToWebpage(price, symbol , color) {
-
+function displayToWebpage(price, symbol, color) {
   var div = document.createElement("div");
-  div.setAttribute("class" , "stocks");
-  div.setAttribute("data-price" , price);
+  div.setAttribute("class", "stocks");
+  div.setAttribute("data-price", price);
   div.style.backgroundColor = color;
   div.textContent = symbol + " " + price.toString();
   divStocks.appendChild(div);
-
 }
 
-function getApi(requestUrl , color) {
+function getApi(requestUrl, color) {
   fetch(requestUrl)
     .then(function (response) {
       console.log(response);
@@ -72,7 +68,7 @@ function getApi(requestUrl , color) {
         .then(function (data) {
           console.log(data.c);
 
-          displayToWebpage(data.c, symbol , color);
+          displayToWebpage(data.c, symbol, color);
         });
     });
 }
@@ -97,10 +93,10 @@ getNewsApi(newsUrl);
 
 getNewsApi(newsUrl);
 
-getApi(teslaUrl , "blue");
-getApi(amazonUrl , "red");
-getApi(microSoft , "blue");
-getApi(XOM , "red");
+getApi(teslaUrl, "blue");
+getApi(amazonUrl, "red");
+getApi(microSoft, "blue");
+getApi(XOM, "red");
 console.log(button);
 
 // Add current day and time
@@ -114,4 +110,3 @@ currentDay.append(dayjs().format("MMM D, YYYY"));
 $("#myModal").on("shown.bs.modal", function () {
   $("#myInput").trigger("focus");
 });
-
