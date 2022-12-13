@@ -5,6 +5,11 @@
   --purple: #c252e1;
   --light: #e0d9f6;
 }
+
+.card-body {
+  text-align: center;
+}
+
 .emoji {
   justify-content: end;
   font-size: 21px;
@@ -68,7 +73,7 @@ body {
   );
   font-family: "Chakra Petch", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   height: 100vh;
 }
 
