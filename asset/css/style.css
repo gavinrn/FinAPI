@@ -1,4 +1,3 @@
-
 :root {
   --dark: #2a2356;
   --dark-blue: #586ae2;
@@ -7,6 +6,25 @@
   --light: #e0d9f6;
 }
 
+.navbar-brand {
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-color: var(--light-blue);
+}
+
+#currentDay {
+  color: var(--purple);
+  font-weight: bold;
+}
+
+#stockSymbol-input {
+  justify-content: center;
+  align-items: center;
+}
+
+title {
+  font-size: 300px;
+}
 
 .news-scroll {
   padding: 10px;
@@ -30,6 +48,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: 'Rajdhani', sans-serif;
+  height: 100vh;
 }
 
 .blinking {
@@ -57,13 +76,6 @@ body {
 }
 
 /* make marquee transparent */
-marquee{
-  background-color: #ffffff7f;
-
+marquee {
+  background-color: transparent;
 }
-
-
-/* .marquee{
-  background-color: rgba(255, 255, 255, 0);
-} */
-
