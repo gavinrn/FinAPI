@@ -1,3 +1,4 @@
+/* Color palette */
 :root {
   --dark: #2a2356;
   --dark-blue: #586ae2;
@@ -6,6 +7,19 @@
   --light: #e0d9f6;
 }
 
+/* Styling for body */
+body {
+  background: rgb(88, 106, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(88, 106, 226, 1) 0%,
+    rgba(42, 35, 86, 1) 80%
+  );
+  font-family: 'Rajdhani', sans-serif;
+  height: 100vh;
+}
+
+/* Styling for header/navbar */
 .emoji {
   justify-content: end;
   font-size: 21px;
@@ -39,6 +53,7 @@ a:active {
   font-weight: bold;
 }
 
+/* Styling for add stock feature */
 #stockSymbol-input {
   justify-content: center;
   align-items: center;
@@ -48,8 +63,22 @@ title {
   font-size: 300px;
 }
 
+/* Styling for news marquee */
 .news-scroll {
   padding: 10px;
+}
+
+#newsfeed a {
+  color: var(--purple);
+  background: hsla(0, 0%, 0%, 1);
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+/* Styling for stocks card */
+#Stocks {
+  font-size: 25px;
 }
 
 .card-header {
@@ -60,17 +89,8 @@ title {
   background-color: var(--dark);
 }
 
-body {
-  background: rgb(88, 106, 226);
-  background: linear-gradient(
-    0deg,
-    rgba(88, 106, 226, 1) 0%,
-    rgba(42, 35, 86, 1) 80%
-  );
-  font-family: 'Rajdhani', sans-serif;
-  height: 100vh;
-}
 
+/* Styling for footer */
 .blinking {
   animation: blinkingText 1s infinite;
   text-align: center;
@@ -95,15 +115,7 @@ body {
   }
 }
 
-/* Marquee Styling  */
-#newsfeed a {
-  color: var(--purple);
-  background: hsla(0, 0%, 0%, 1);
-  font-family: "DotGothic16", sans-serif;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
 
-#Stocks {
-  font-size: 25px;
-}
+
+
+
