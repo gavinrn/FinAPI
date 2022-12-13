@@ -25,18 +25,34 @@ const stockSymbol = document.querySelector("#stockSymbol-input");
 
 const button = document.getElementById("addStocks");
 
+var i = 0;
+var color = "blue";
 button.addEventListener("click", function () {
+
   var name = stockSymbol.value.trim();
-  getApi(finnhubURL + name);
+
+  if (i % 2 === 0) {
+    color = "blue";
+  }
+  else {
+    color = "red";
+  }
+  i++;
+  getApi(finnhubURL + name , color);
 });
 
-function displayToWebpage(price, symbol) {
+function displayToWebpage(price, symbol , color) {
+
   var div = document.createElement("div");
+  div.setAttribute("class" , "stocks");
+  div.setAttribute("data-price" , price);
+  div.style.backgroundColor = color;
   div.textContent = symbol + " " + price.toString();
   divStocks.appendChild(div);
+
 }
 
-function getApi(requestUrl) {
+function getApi(requestUrl , color) {
   fetch(requestUrl)
     .then(function (response) {
       console.log(response);
@@ -56,7 +72,7 @@ function getApi(requestUrl) {
         .then(function (data) {
           console.log(data.c);
 
-          displayToWebpage(data.c, symbol);
+          displayToWebpage(data.c, symbol , color);
         });
     });
 }
@@ -81,10 +97,10 @@ getNewsApi(newsUrl);
 
 getNewsApi(newsUrl);
 
-getApi(teslaUrl);
-getApi(amazonUrl);
-getApi(microSoft);
-getApi(XOM);
+getApi(teslaUrl , "blue");
+getApi(amazonUrl , "red");
+getApi(microSoft , "blue");
+getApi(XOM , "red");
 console.log(button);
 
 // Add current day and time
