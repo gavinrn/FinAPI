@@ -6,19 +6,6 @@
   --light: #e0d9f6;
 }
 
-::selection {
-  background-color: #99ff99;
-}
-
-.stocks:hover {
-  user-select: all;
-  background-color: #99ff99;
-}
-
-.card-body {
-  text-align: center;
-}
-
 .emoji {
   justify-content: end;
   font-size: 21px;
@@ -81,7 +68,6 @@ body {
     rgba(42, 35, 86, 1) 80%
   );
   font-family: "Open Sans", sans-serif;
-  font-family: "Rajdhani", sans-serif;
   height: 100vh;
 }
 

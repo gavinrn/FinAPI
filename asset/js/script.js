@@ -26,29 +26,50 @@ const stockSymbol = document.querySelector("#stockSymbol-input");
 const button = document.getElementById("addStocks");
 
 var i = 0;
-var color = "blue";
-button.addEventListener("click", function () {
+
+var color;
+button.addEventListener("click", function () { // adds an event lister to the add stocks button, calls getApi to for the new stock
+
   var name = stockSymbol.value.trim();
 
   if (i % 2 === 0) {
-    color = "blue";
-  } else {
-    color = "red";
+    color = "limegreen";
+  }
+  else {
+    color = "orangered";
+
   }
   i++;
   getApi(finnhubURL + name, color);
 });
 
-function displayToWebpage(price, symbol, color) {
+
+divStocks.addEventListener("click" , function(event) { //adds an event listner to the stocks card to save stocks to local storage on dblclick
+  var element = event.target;
+  if (element.matches(".stocks")) {
+
+    //localStorage.setItem("symbol" , )
+  }
+
+});
+
+
+
+function displayToWebpage(price, symbol , color) { // displays the information from getAPI to the webpage
+
   var div = document.createElement("div");
-  div.setAttribute("class", "stocks");
-  div.setAttribute("data-price", price);
+  div.setAttribute("class" , "stocks");
+  div.setAttribute("data-price" , price);
+  div.setAttribute("data-symbol" , symbol);
+
   div.style.backgroundColor = color;
   div.textContent = symbol + " " + price.toString();
   divStocks.appendChild(div);
 }
 
+
 function getApi(requestUrl, color) {
+
   fetch(requestUrl)
     .then(function (response) {
       console.log(response);
@@ -93,10 +114,11 @@ getNewsApi(newsUrl);
 
 getNewsApi(newsUrl);
 
-getApi(teslaUrl, "blue");
-getApi(amazonUrl, "red");
-getApi(microSoft, "blue");
-getApi(XOM, "red");
+getApi(teslaUrl , "limegreen");
+getApi(amazonUrl , "orangered");
+getApi(microSoft , "limegreen");
+getApi(XOM , "orangered");
+
 console.log(button);
 
 // Add current day and time
