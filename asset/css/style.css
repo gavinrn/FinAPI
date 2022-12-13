@@ -6,8 +6,19 @@
   --light: #e0d9f6;
 }
 
+
+::selection {
+  background-color: #99ff99;
+
+}
+
+.stocks:hover{
+  user-select: all;
+  background-color: #99ff99;
+
 .card-body {
   text-align: center;
+
 }
 
 .emoji {
