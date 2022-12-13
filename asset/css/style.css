@@ -6,6 +6,7 @@
   --light: #e0d9f6;
 }
 
+
 ::selection {
   background-color: #99ff99;
 
@@ -14,6 +15,10 @@
 .stocks:hover{
   user-select: all;
   background-color: #99ff99;
+
+.card-body {
+  text-align: center;
+
 }
 
 .emoji {
@@ -79,6 +84,7 @@ body {
   );
   font-family: "Chakra Petch", sans-serif;
   font-family: "Open Sans", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   height: 100vh;
 }
 
@@ -104,9 +110,4 @@ body {
   100% {
     color: #000;
   }
-}
-
-/* make marquee transparent */
-marquee {
-  background-color: transparent;
 }

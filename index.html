@@ -14,34 +14,35 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/style.css" />
     <title>Project Currency</title>
   </head>
   <body>
 
 <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand ">Project Currency 💱</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" id="currentDay"></a>
-              <div class="emoji">Investors:
-                <a href="https://github.com/amaryahwolf"><span title="Amaryah Wolf">💽</span></a>
-                <a href="https://github.com/gavinrn"><span title="Gavin Mcnutt">🧘🏻‍♂️</span></a>
-                <a href="https://github.com/Eddiebuck88"><span title="Edmond Buck">🎧</span></a>
-                <a href="https://github.com/Allie-Ang"><span title="Allie Ang">☕</span></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid d-flex justify-content-between">
+    <a class="navbar-brand ">Project Currency 💱</a>
+      <div id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link d-flex justify-content-end" id="currentDay"></a>
+
+<!--Emoji Header-->
+<div class="emoji">Investors:
+  <a href="https://github.com/amaryahwolf"><span title="Amaryah Wolf">💽</span></a>
+  <a href="https://github.com/gavinrn"><span title="Gavin Mcnutt">🧘🏻‍♂️</span></a>
+  <a href="https://github.com/Eddiebuck88"><span title="Edmond Buck">🎧</span></a>
+  <a href="https://github.com/Allie-Ang"><span title="Allie Ang">☕</span></a>
+      </div></li></ul></div></nav>
 
 <!-- Scrolling newsfeed -->
 <div style="text-align:center;">
-        <div class="row container m-5 col-md-12 justify-content-between align-items-center bg-white">
-                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        <div class="row container m-5 col-md-12 justify-content-between align-items-center">
+                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" id="led">
                     <div id="newsfeed"></div>
                   </marquee>
                 </div></div>
@@ -49,7 +50,7 @@
 <!-- Button to add stocks -->
 <div style="text-align:center;">
 <input type="text" name="stockSymbol" id="stockSymbol-input">
-<button id="addStocks">Add Stocks</button></di>
+<button id="addStocks">Add Stocks</button></div>
 
 <!-- Stock card -->
     <div class="row m-5 justify-content-center">
