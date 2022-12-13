@@ -41,10 +41,14 @@ button.addEventListener("click", function () { // adds an event lister to the ad
 
 
 divStocks.addEventListener("click" , function(event) { //adds an event listner to the stocks card to save stocks to local storage on dblclick
+  event.preventDefault();
   var element = event.target;
   if (element.matches(".stocks")) {
 
-    //localStorage.setItem("symbol" , )
+    localStorage.setItem("symbol" , element.dataset.symbol);
+  }
+  else {
+
   }
 
 });
@@ -55,7 +59,7 @@ function displayToWebpage(price, symbol , color) { // displays the information f
 
   var div = document.createElement("div");
   div.setAttribute("class" , "stocks");
-  div.setAttribute("data-price" , price);
+  // div.setAttribute("data-price" , price);
   div.setAttribute("data-symbol" , symbol);
 
   div.style.backgroundColor = color;
@@ -110,10 +114,15 @@ getNewsApi(newsUrl);
 
 getNewsApi(newsUrl);
 
-getApi(teslaUrl , "limegreen");
-getApi(amazonUrl , "orangered");
-getApi(microSoft , "limegreen");
+//getApi(teslaUrl , "limegreen");
+//getApi(amazonUrl , "orangered");
+//getApi(microSoft , "limegreen");
 getApi(XOM , "orangered");
+
+if (localStorage.getItem("symbol") !== null) {
+  getApi(finnhubURL + localStorage.getItem("symbol") , "blue");
+}
+
 
 console.log(button);
 
