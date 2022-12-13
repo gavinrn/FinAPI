@@ -11,7 +11,7 @@ const XOM =
   "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM";
 
 const newsUrl =
-  "https://newsdata.io/api/1/news?apikey=pub_14561e5b53f7341486ab754cf4d4fde72aae3&q=results&category=business,technology&language=en";
+  "https://newsdata.io/api/1/news?apikey=pub_14568c083e3420b033803ee4e5dcc79894d97&q=results&category=business,technology&language=en";
 
 var finnhubURL =
   "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=";
@@ -26,6 +26,7 @@ const stockSymbol = document.querySelector("#stockSymbol-input");
 const button = document.getElementById("addStocks");
 
 var i = 0;
+
 var color;
 button.addEventListener("click", function () { // adds an event lister to the add stocks button, calls getApi to for the new stock
 
@@ -36,10 +37,12 @@ button.addEventListener("click", function () { // adds an event lister to the ad
   }
   else {
     color = "orangered";
+
   }
   i++;
-  getApi(finnhubURL + name , color);
+  getApi(finnhubURL + name, color);
 });
+
 
 divStocks.addEventListener("click" , function(event) { //adds an event listner to the stocks card to save stocks to local storage on dblclick
   var element = event.target;
@@ -58,13 +61,15 @@ function displayToWebpage(price, symbol , color) { // displays the information f
   div.setAttribute("class" , "stocks");
   div.setAttribute("data-price" , price);
   div.setAttribute("data-symbol" , symbol);
+
   div.style.backgroundColor = color;
   div.textContent = symbol + " " + price.toString();
   divStocks.appendChild(div);
-
 }
 
-function getApi(requestUrl , color) { //
+
+function getApi(requestUrl, color) {
+
   fetch(requestUrl)
     .then(function (response) {
       console.log(response);
@@ -84,7 +89,7 @@ function getApi(requestUrl , color) { //
         .then(function (data) {
           console.log(data.c);
 
-          displayToWebpage(data.c, symbol , color);
+          displayToWebpage(data.c, symbol, color);
         });
     });
 }
@@ -113,6 +118,7 @@ getApi(teslaUrl , "limegreen");
 getApi(amazonUrl , "orangered");
 getApi(microSoft , "limegreen");
 getApi(XOM , "orangered");
+
 console.log(button);
 
 // Add current day and time

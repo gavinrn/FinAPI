@@ -54,7 +54,7 @@ title {
 
 .card-header {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--purple);
   background-color: var(--dark);
@@ -67,7 +67,6 @@ body {
     rgba(88, 106, 226, 1) 0%,
     rgba(42, 35, 86, 1) 80%
   );
-  font-family: "Chakra Petch", sans-serif;
   font-family: "Open Sans", sans-serif;
   height: 100vh;
 }
@@ -96,7 +95,15 @@ body {
   }
 }
 
-/* make marquee transparent */
-marquee {
-  background-color: transparent;
+/* Marquee styling  */
+#newsfeed a {
+  color: var(--purple);
+  background: hsla(0, 0%, 0%, 1);
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+#Stocks {
+  font-size: 25px;
 }
