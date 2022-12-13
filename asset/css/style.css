@@ -94,8 +94,3 @@ body {
     color: #000;
   }
 }
-
-/* make marquee transparent */
-marquee {
-  background-color: transparent;
-}
