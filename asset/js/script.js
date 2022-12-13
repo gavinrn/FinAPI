@@ -23,6 +23,7 @@ const amazon = document.getElementsByTagName("button");
 const querySelector = document.body.querySelector("card-body");
 const stockSymbol = document.querySelector("#stockSymbol-input");
 
+
 const button = document.getElementById("addStocks");
 
 var i = 0;
