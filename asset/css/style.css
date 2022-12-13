@@ -67,7 +67,7 @@ title {
 
 .card-header {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--purple);
   background-color: var(--dark);
@@ -111,10 +111,15 @@ body {
 
 /* Marquee styling  */
 #newsfeed a {
-  color: #64F517;
+  color: #64f517;
   background: hsla(0, 0%, 0%, 1);
-  font-family: 'Electrolize', sans-serif;
-  letter-spacing:3px;
-  text-shadow:1px 1px hsla(255,255%,255%, .7),2px 2px hsla(255,255%,255%, .6),3px 3px hsla(255,255%,255%, .5), 4px 4px hsla(255,255%,255%, .3), 5px 5px hsla(255,255%,255%, .1);
+  font-family: "Electrolize", sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px hsla(255, 255%, 255%, 0.7),
+    2px 2px hsla(255, 255%, 255%, 0.6), 3px 3px hsla(255, 255%, 255%, 0.5),
+    4px 4px hsla(255, 255%, 255%, 0.3), 5px 5px hsla(255, 255%, 255%, 0.1);
 }
 
+#Stocks {
+  font-size: 25px;
+}
