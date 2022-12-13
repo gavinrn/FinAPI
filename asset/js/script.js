@@ -1,20 +1,16 @@
-const teslaUrl =
-  "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Tesla";
+// News Api!
 
-const amazonUrl =
-  "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Amazon.com";
+const teslaUrl = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Tesla";
 
-const microSoft =
-  "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=MSFT";
+const amazonUrl = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=Amazon.com";
 
-const XOM =
-  "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM";
+const microSoft = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=MSFT";
 
-const newsUrl =
-  "https://newsdata.io/api/1/news?apikey=pub_14568c083e3420b033803ee4e5dcc79894d97&q=results&category=business,technology&language=en";
+const XOM = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=XOM";
 
-var finnhubURL =
-  "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=";
+const newsUrl = "https://newsdata.io/api/1/news?apikey=pub_14568c083e3420b033803ee4e5dcc79894d97&q=results&category=business,technology&language=en";
+
+var finnhubURL = "https://finnhub.io/api/v1/search?token=ce9oj4iad3i831oou580ce9oj4iad3i831oou58g&q=";
 
 var newsfeedEl = document.querySelector("#newsfeed");
 
