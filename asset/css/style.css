@@ -29,6 +29,7 @@ body {
   );
   font-family: "Chakra Petch", sans-serif;
   font-family: "Open Sans", sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .blinking {
@@ -57,5 +58,12 @@ body {
 
 /* make marquee transparent */
 marquee{
-  background-color: transparent;
+  background-color: #ffffff7f;
+
 }
+
+
+/* .marquee{
+  background-color: rgba(255, 255, 255, 0);
+} */
+
