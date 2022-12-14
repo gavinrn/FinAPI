@@ -15,7 +15,7 @@ body {
     rgba(88, 106, 226, 1) 0%,
     rgba(42, 35, 86, 1) 80%
   );
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   height: 100vh;
 }
 
@@ -89,6 +89,9 @@ title {
   background-color: var(--dark);
 }
 
+.card-body {
+  text-align: center;
+}
 
 /* Styling for footer */
 .blinking {
@@ -114,8 +117,3 @@ title {
     color: #000;
   }
 }
-
-
-
-
-
