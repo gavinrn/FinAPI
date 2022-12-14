@@ -1,5 +1,8 @@
 # Project Currency 💱
 
+## [Deployed Application]()
+
+## Usage
 Project Currency displays a collaborative effort consisting of 4 contributors.
 Amaryah Wolf, Edmond Buck, Gavin Mccnutt & Allie Ang.
 
@@ -11,4 +14,14 @@ Project Currency displays accurate and up to date information without overwhelem
 This information is possible by the use of 2 API's.
 HTML & CSS are dynamically used powered by JavaScript to created to responsive website.
 
-_ADD FINAL SCREEN CAP_
+![Screenshot of Application](/asset/project-currency-screenshot.png)
+
+## Credits
+Collaborators:
+Allie Ang,
+Amaryah Wolf,
+Edmond Buck,
+Gavin McNutt
+
+## License
+Refer to LICENSE in the repo.
